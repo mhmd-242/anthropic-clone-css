@@ -1,0 +1,69 @@
+<svg id="globe-svg" class="globe-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <clipPath id="fill-clip">
+        <circle id="fill-clip-c" cx="700" cy="500" r="559"></circle>
+      </clipPath>
+      <filter id="glow-blur" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="5"></feGaussianBlur>
+      </filter>
+      <clipPath id="glow-clip">
+        <path id="glow-clip-path" d=""></path>
+      </clipPath>
+    </defs>
+
+    <rect x="0" y="0" width="1400" height="1000" fill="#E8E6DC"></rect>
+    <circle id="disk" cx="700" cy="500" r="560" fill="#E8E6DC" stroke="none"></circle>
+
+    <!-- back-hemisphere grid -->
+    <g fill="none">
+      <path id="back-grid" stroke-width="0.35" stroke="rgba(20,20,19,0.063)" d=""></path>
+    </g>
+
+    <!-- country fills -->
+    <path id="country-fill" fill="none" fill-rule="evenodd" stroke="none" clip-path="url(#fill-clip)" style="opacity: 0; transition: opacity 0.6s ease-in" d=""></path>
+
+    <!-- front-hemisphere grid -->
+    <g fill="none">
+      <path id="front-grid" stroke-width="0.4" stroke="rgba(20,20,19,0.18)" d=""></path>
+      <path id="bold-grid" stroke-width="0.5" stroke="rgba(20,20,19,0.306)" d=""></path>
+    </g>
+
+    <!-- country outlines -->
+    <path id="countries" fill="none" stroke-width="0.55" stroke="rgba(20,20,19,0.32)" stroke-linejoin="round" stroke-linecap="round" style="opacity: 0; transition: opacity 0.6s ease-in" d=""></path>
+
+    <!-- US state borders -->
+    <path id="states" fill="none" stroke-width="0.35" stroke="rgba(20,20,19,0.208)" stroke-linejoin="round" stroke-linecap="round" style="opacity: 0; transition: opacity 0.6s ease-in; pointer-events: none" d=""></path>
+
+    <!-- hovered country outline -->
+    <path id="hover-outline" fill="none" stroke="rgba(20,20,19,0.35)" stroke-width="0.75" stroke-linejoin="round" stroke-linecap="round" style="pointer-events: none" d=""></path>
+
+    <!-- focus glow -->
+    <g clip-path="url(#glow-clip)" style="pointer-events: none">
+      <path id="glow" fill="none" stroke="#eda100" stroke-opacity="0.25" stroke-width="16" stroke-linejoin="round" filter="url(#glow-blur)" d=""></path>
+    </g>
+
+    <!-- focus outline -->
+    <path id="focus-outline" fill="none" stroke="#eda100" stroke-opacity="1" stroke-width="0.55" stroke-linejoin="round" stroke-linecap="round" style="pointer-events: none" d=""></path>
+
+    <!-- dots -->
+    <g fill="none" stroke-linecap="round" style="pointer-events: none">
+      <path id="dots-dim" stroke="rgba(20,20,19,1)" stroke-opacity="0.28" stroke-width="2.4" d=""></path>
+      <path id="dots-fade" stroke="#eda100" stroke-opacity="0" stroke-width="2.4" d=""></path>
+      <path id="dots-main" stroke="#eda100" stroke-opacity="0.8" stroke-width="2.4" d=""></path>
+      <path id="dots-green" stroke="#6ea100" stroke-opacity="0.8" stroke-width="2.4" d=""></path>
+      <path id="dots-blue" stroke="#6396d6" stroke-opacity="0.8" stroke-width="2.4" d=""></path>
+      <path id="dots-green-pulse" stroke="#6ea100" stroke-opacity="0.8" stroke-width="4.32" d=""></path>
+      <path id="dots-blue-pulse" stroke="#6396d6" stroke-opacity="0.8" stroke-width="4.32" d=""></path>
+    </g>
+
+    <!-- wiper lines (unused in phase 1, included for completeness) -->
+    <path id="wiper-g" fill="none" stroke="rgba(20,20,19,0.4)" stroke-width="0.9" d=""></path>
+    <path id="wiper-b" fill="none" stroke="rgba(20,20,19,0.4)" stroke-width="0.9" d=""></path>
+
+    <!-- degree labels -->
+    <g id="labels"></g>
+
+    <!-- rim -->
+    <circle id="rim-in" cx="700" cy="500" r="560" fill="none" stroke="rgba(20,20,19,0.55)" stroke-width="0.6"></circle>
+    <circle id="rim-out" cx="700" cy="500" r="566" fill="none" stroke="rgba(20,20,19,0.35)" stroke-width="0.4"></circle>
+  </svg>

@@ -1,0 +1,125 @@
+:root {
+    --bg-primary : #F4F3EF ;
+    --bg-secondary : #B0AEA5 ;
+    --bg-tertiary : #E3DACC ;
+    --bg-quatenary : #141413 ;
+    --font-color-primary : #141413 ;
+    --font-color-secondary : #5E5D59 ;
+    --font-color-tertiary : #FAF9F5  ;
+    --font-color-quaternary : #B0AEA5 ;
+    /*--font-style-primary : 
+    --font-style-secondary :
+    --font-style-tertiary : 
+    --font-style-quatenary :*/
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: var(--bg-primary);
+    margin: 0 8rem;
+}
+header {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-primary);
+}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+}
+header nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0 1.5rem;
+}
+header nav .nav-links .links ul {
+    list-style: none;
+    display: flex;
+    gap: 0 1.5rem;
+}
+header nav .nav-links .links ul .down-icon {
+    display: flex;
+    gap: 0 0.5rem;
+    text-align: center;
+}
+header nav .nav-links .cta {
+    background-color: var(--bg-quatenary);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 0.5rem;
+    overflow: hidden;
+}
+header nav .logo img {
+    width: 2.85rem;
+}
+header nav .nav-links .links ul li a {
+    text-decoration: none;
+    color: var(--font-color-secondary);
+}
+header nav .nav-links .links ul li a:hover {
+    text-decoration: underline;
+}
+header nav .nav-links .links ul li img {
+    width: 1rem;
+}
+header nav .nav-links .cta a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--font-color-tertiary);
+    padding: 0.6rem 0.8rem;
+    border-right: 1px solid var(--bg-secondary);
+}
+header nav .nav-links .cta a:hover {
+    background-color: var(--bg-secondary);
+}
+header nav .nav-links .cta .chevron-icon {
+    padding: 0 1rem;
+    text-align: center;
+}
+header nav .nav-links .cta .chevron-icon img {
+    width: 0.8rem;
+}
+.section-1 {
+    margin-bottom: 12rem;
+}
+.section-1 .section-1-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 4rem;
+    height: 300px;
+}
+.section-1 .section-1-wrapper h2 {
+    font-size: 3.5rem;
+}
+.section-1 .section-1-wrapper h2 a{
+    color: var(--font-color-primary);
+}
+.section-1 .section-1-wrapper h2 a:hover {
+    background-color: var(--font-color-quaternary);
+}
+.section-1 .section-1-wrapper p {
+    font-size: 1.8rem;
+}
+.section-2 .section-2-wrapper {
+    height: 900px;
+    background-color: var(--bg-secondary);
+    margin: 0 3rem;
+    border-radius: 6px;
+}
+.section-2 {
+    margin-bottom: 12rem;
+}
+.section-3 .section-3-wrapper {
+    display: flex;
+}
+.section-3 .section-3-wrapper > div {
+    background-color: var(--bg-tertiary);
+}
